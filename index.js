@@ -15,15 +15,18 @@ console.log("\n \n \n \n \n \n")
     // (unsurprisingly) block scoping. This means all we need is a pair of { .. } to create a scope
 
 
-    // var a = 2   
+    // let a = 2
     // {
-    //     var a = 3
-    //     console.log(a)
+    //     let a = 3
+    //     {
+    //         console.log(a)
+    //     }
     // }
 
     // console.log(a)
 
 
+    // accessible even before its declared
     // console.log(a)
     // var a = 2
 
@@ -66,6 +69,8 @@ console.log("\n \n \n \n \n \n")
     //     y = (y !== undefined) ? y:5
     //     console.log(x+y)
     // }
+    // foo( undefined, 1 )
+    
     
     //what if you need to pass in undefined
     // function foo(x,y){
@@ -85,16 +90,16 @@ console.log("\n \n \n \n \n \n")
     // foo()
     // foo(5,6)
     // foo(5)
-    // foo(null,6)
+    // foo(undefined,10)
     // foo()
 
 
 // Destructuring
     //the problem
-    const getArr = ()=>[1,2,3]
-    const getObj = ()=>{ 
-        return {name:"Harry", house:"Gryffindor"} 
-    }
+    // const getArr = ()=>[1,2,3]
+    // const getObj = ()=>{ 
+    //     return {name:"Harry", house:"Gryffindor"} 
+    // }
 
     // let tmp = getArr(), a=tmp[0], b=tmp[1], c=tmp[2]
     // console.log( a, b, c)
@@ -148,12 +153,46 @@ console.log("\n \n \n \n \n \n")
 
     
 // Object literal Extensions
+    // let x=1, y=5,
+    // obj = {
+    //     x:x,
+    //     y:y
+    // }
+    // let x=1, y=5,
+    // obj = { x, y }
 
+    // console.log(obj.x, obj.y)
+    // let obj ={
+    //     x: function(){
+    //         //does something
+    //     }
+    // }
+    
+    // let obj ={
+    //     x: function something(){
+    //         //does something
+    //         // when you have named function as such and you want to run a recursively its a good idea not go with the consise methods
+    //         // I don't yet find it fully conclusive though
+    //     }
+    // }
+
+    // let obj = {
+    //     x(){
+    //         console.log("hello")
+    //     },
+    // }
+    
 
 // Template Literals
+    // let name = "Ron"
+    // let greeting = "Hello " + name + "!"
+    // let greeting = `Hello ${name}`
+    // let greeting = `Hello ${name.toUpperCase()}`
+    // console.log(greeting)
 
 
 // Arrow Functions
+    //not just shorter syntaxt
 
 // For..of Loops
 
